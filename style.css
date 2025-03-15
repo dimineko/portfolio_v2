@@ -46,7 +46,7 @@ body {
     margin-left: 2%;
 }
 header{
-    background-color: rgba(0, 0, 0, 0.8); /* Negro semitransparente */;
+    background-color: rgba(255, 0, 0, 0.8); /* Negro semitransparente */;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -85,34 +85,14 @@ nav li {
     overflow:hidden; /* evita el scroll */
 }
 
-.area_foto{
-    border: 1px solid blue;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 70%;
-    border-radius: 1.3vh;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-}
-
-.area_foto2{
-    border: 1px solid blue;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 30%;
-    border-radius: 1.3vh;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-
-}
 
 
 .img_area_foto{
-    border-radius: 50%;
-    align-content: center;
+    border-radius: 100%;
+    width: 50%;
+    height: auto;
 }
+
 
 
 
@@ -121,4 +101,10 @@ nav li {
 .titulo_foto{
     text-align: center;
     margin:5%;
+}
+
+.cuadro{
+    flex: 1; /* adapta espacio según cuantos cuadrados haya */
+    border: 3px solid yellow; /* Borde amarillo */
+    margin: 5px; /* espacio; /* Borde para debugging
 }
