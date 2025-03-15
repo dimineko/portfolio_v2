@@ -9,27 +9,34 @@
 
 
 * {
-
     color: white;
     text-align: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html, body{
     font-family: var(--fuente-personalizada);
     height: 100%;
-    margin: 0;
-    box-sizing: border-box;
     font-family: 'FuenteCyberpunk';
 }
 
 body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url("/assets/images/wallpaper_ia_reescalado.jpg");
+    background-image: url("/assets/images/wallpaper_ia_reescalado.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 100%;
-    border: 1px solid yellow;
+    border-radius: 15px;
+    padding: 10px;
 
+}
+
+.tarjeta{
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Negro semitransparente */
 }
 
 header{
