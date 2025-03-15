@@ -33,7 +33,6 @@ body {
 }
 
 .tarjeta{
-    border: 1px solid black;
     border-radius: 1%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6); /* Negro semitransparente */
@@ -103,8 +102,66 @@ nav li {
     margin:5%;
 }
 
+
 .cuadro{
-    flex: 1; /* adapta espacio según cuantos cuadrados haya */
-    border: 3px solid yellow; /* Borde amarillo */
-    margin: 5px; /* espacio; /* Borde para debugging
+    flex: 1;
+    margin: 5px;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 10%;
+    border: 1px solid yellow;
+}
+
+.cuadro_bio{
+    flex: 1;
+    margin: 5px;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 10%;
+}
+
+.cuadro_projectos{
+    flex: 1;
+    margin: 5px;
+    align-content: center;
+    background-color: rgb(23, 23, 23, 0.98); /* Negro semitransparente */
+}
+
+.cuadro_foto{
+    flex: 1;
+    margin: 5px;
+    align-content: center;
+}
+
+
+.foto_perfil{
+    width: 50%;
+    height: auto;
+    border-radius: 100%;
+}
+
+
+.titulo_bio{
+    text-align: center;
+    font-size: 5em;
+}
+
+.subtitulo{
+    text-align: center;
+    font-size: 1.5em;
+}
+
+
+.separador_bio{
+    border: 1px solid red;
+    width: 50%;
+    margin-top: 2%;
+    margin-left: 2.75%;
+    margin: auto
+}
+
+.bio{
+    margin-top: 5%;
+    text-align: center;
+    font-size: 1.5em;
 }
