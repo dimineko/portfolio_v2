@@ -37,6 +37,8 @@ body {
     border-radius: 1%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6); /* Negro semitransparente */
+    display: flex;
+    flex-direction: column;
 }
 
 .titulo{
@@ -50,12 +52,13 @@ header{
     align-items: center;
     border-radius: 1.3vh;
     border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
     
 
 
 }
 
-nav{
+ul{
     display: flex;
 }
 
@@ -71,4 +74,51 @@ nav li {
 .rrss{
     height: auto;
     width: 5vh;
+}
+
+.area_perfil{
+    display: flex;
+    flex-grow: 1;  /* rellena el espacio restante*/
+    border-radius: 1%h;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    overflow:hidden; /* evita el scroll */
+}
+
+.area_foto{
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 70%;
+    border-radius: 1.3vh;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.area_foto2{
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 30%;
+    border-radius: 1.3vh;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+}
+
+
+.img_area_foto{
+    border-radius: 50%;
+    align-content: center;
+}
+
+
+
+
+
+.titulo_foto{
+    text-align: center;
+    margin:5%;
 }
