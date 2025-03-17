@@ -10,7 +10,6 @@
 
 * {
     color: white;
-    text-align: center;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -29,6 +28,7 @@ body {
     background-size: cover;
     border-radius: 15px;
     padding: 2%;
+    
 
 }
 
@@ -43,9 +43,10 @@ body {
 .titulo{
     text-align: left;
     margin-left: 2%;
+
 }
 header{
-    background-color: rgba(255, 0, 0, 0.8); /* Negro semitransparente */;
+    background-color: rgba(255, 0, 0, 0.57); /* Negro semitransparente */;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -57,7 +58,7 @@ header{
 
 }
 
-ul{
+.ul_rrss{
     display: flex;
 }
 
@@ -65,7 +66,7 @@ li{
     text-decoration: none;
 }
 
-nav li {
+.li_rrss{
     list-style-type: none;
     margin: 2vh;
 }
@@ -105,11 +106,10 @@ nav li {
 
 .cuadro{
     flex: 1;
-    margin: 5px;
     align-items: center;
     align-content: center;
-    margin-bottom: 10%;
     border: 1px solid yellow;
+    font-size: 3em;
 }
 
 .cuadro_bio{
@@ -118,16 +118,18 @@ nav li {
     align-items: center;
     align-content: center;
     margin-bottom: 10%;
+    min-width: 33%;
+    margin-top: 11vh;
 }
 
 .cuadro_projectos{
-    flex: 1;
-    margin: 5px;
     align-content: center;
-    background-color: rgb(23, 23, 23, 0.98); /* Negro semitransparente */
+    align-items: center;
+    min-width: 33%;
 }
 
 .cuadro_foto{
+    min-width: 33%;
     flex: 1;
     margin: 5px;
     align-content: center;
@@ -141,9 +143,9 @@ nav li {
 }
 
 
-.titulo_bio{
+.titulo_tarjeta{
     text-align: center;
-    font-size: 5em;
+    font-size: 7vh;
 }
 
 .subtitulo{
@@ -164,4 +166,113 @@ nav li {
     margin-top: 5%;
     text-align: center;
     font-size: 1.5em;
+}
+
+
+.h1_proyectos_neon{
+    font-size: 5em;
+}
+
+.ul_proyectos_neon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+	margin: 0;
+	padding: 0;
+}
+
+
+.ul_proyectos_neon li{
+    position: relative;
+	list-style: none;
+	font-size: 2em;
+	padding: 15px;
+	color: #fff;
+	font-family: monospace;
+	cursor: pointer;
+	box-sizing: border-box;
+	transition: 0.5s;
+    z-index: 1;
+    width: 75%;
+    text-align:justify
+}
+
+
+.ul_proyectos_neon li:hover{
+    color: #111;
+}
+
+
+.ul_proyectos_neon li:before
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	transform: scaleY(0);
+	transition: transform 0.33s;
+	transform-origin: bottom;
+    background: rgb(255, 0, 0); /* Amarillo con toda la opacidad */
+    border-radius: 1.3vh;
+}
+
+.ul_proyectos_neon li:hover:before
+{
+	transform: scaleY(1);
+	transition: transform 0.5s;
+	transform-origin: top;
+}
+
+.ul_proyectos_neon li:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ff0000;
+    z-index: -1; /* Generalmente -1 es suficiente */
+    transform: scaleY(0);
+    transition: transform 0.5s; /* Corregido: elimina el punto y coma */
+    transform-origin: bottom;
+    filter: blur(40px);
+  }
+  
+  .ul_proyectos_neon li:hover:after {
+    transform: scaleY(1);
+    transition: transform 0.5s;
+    transform-origin: top;
+  }
+  
+
+
+.ul_proyectos_neon li a{
+    text-decoration: none;
+    font-family: var(--fuente-personalizada);
+    font-family: 'FuenteCyberpunk';
+    font-size: 2.5vh;
+    max-width: 90%;
+}
+
+.separador_titulo_proyectos{
+    border: 0.2vh solid red;
+    width: 78%;
+    margin-top: 0.5;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
+
+.separador_proyectos{
+    border: 0.1vh solid rgb(255, 0, 0);
+    width: 66%;
+}
+
+.li_proyectos_neon_first{
+    margin-top: 0.1vh;
 }
