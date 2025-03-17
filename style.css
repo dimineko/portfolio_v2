@@ -179,7 +179,7 @@ li{
     align-items: center;
     justify-content: center;
 	margin: 0;
-	padding: 0;
+	padding-top: 1%;
 }
 
 
@@ -187,7 +187,6 @@ li{
     position: relative;
 	list-style: none;
 	font-size: 2em;
-	padding: 15px;
 	color: #fff;
 	font-family: monospace;
 	cursor: pointer;
@@ -195,7 +194,9 @@ li{
 	transition: 0.5s;
     z-index: 1;
     width: 75%;
-    text-align:justify
+    text-align:center;
+    padding: 2%;
+    
 }
 
 
@@ -261,18 +262,23 @@ li{
 .separador_titulo_proyectos{
     border: 0.2vh solid red;
     width: 78%;
-    margin-top: 0.5;
-    text-align: center;
-    align-items: center;
-    align-content: center;
+    margin: auto;
+    margin-bottom: 0.3vh;
 }
 
 
 .separador_proyectos{
     border: 0.1vh solid rgb(255, 0, 0);
     width: 66%;
+    margin: 2vh;
+    
 }
 
-.li_proyectos_neon_first{
-    margin-top: 0.1vh;
+
+
+.img_proyectos{
+    width: 3vh;
+    height: 3vh auto;
 }
+
+
