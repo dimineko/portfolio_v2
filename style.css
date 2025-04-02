@@ -309,7 +309,6 @@ form{
     border-radius: 15px;
     padding: 2%;
     min-width: 50%;
-    background-color: rgba(0, 0, 0, 0.5); /* Capa oscura con 50% de opacidad */
     background-color: rgba(0, 0, 0, 0.7); /* Capa oscura con 50% de opacidad */
     background-blend-mode: overlay; /* Mezcla el color con la imagen */
 }
@@ -335,24 +334,38 @@ form input:hover{
 
 
 .galeria_grid{
-    background-color: red;
-    display: grid;
+    background-color: rgba(0, 0, 0, 0.4); /* Capa oscura con 50% de opacidad */
+    display: grid; /* Uso de grid para cumplir con los requisitos del proyecto de la fp */
     grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
     grid-template-rows: repeat(2, 1fr);    /* 2 filas iguales */
     border: 1px solid white;
     width: 100%;
     height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 
 .galeria_grid_cuadrado{
+    display: flex;   
+    flex-direction: column;             
+    justify-content: center;      
+    align-items: center;          
     width: 100%;
     height: 100%;
     border: 1px solid white;
+    margin: 0;
+    padding: 0;
 }
 
 .imagen_galeria{
     width: 10vh;
-    margin: 30px;
     height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.galeria_grid_cuadrado:hover{
+    background-color: red;
+    color: white;
 }
