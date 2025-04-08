@@ -28,9 +28,15 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 15px;
-    padding: 2%;
+    padding: 3%;
+    overflow: hidden;
     
 
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 .tarjeta{
@@ -41,23 +47,32 @@ body {
     flex-direction: column;
 }
 
+
+
 .titulo{
     text-align: left;
     margin-left: 2%;
-    font-size: 5em;
-
+    font-size: 6vh;
 }
+
+.titulo, .h1_proyectos_neon{
+    font-size: calc(2vw + 2em); /* Escala con el ancho de la pantalla */
+}
+
+.bio,.subtitulo {
+    font-size: calc(1vw + 1em);
+}
+
 header{
     background-color: rgba(255, 0, 0, 0.57);
     display: flex;
+    flex-direction: ;
     justify-content: space-between;
     align-items: center;
     border-radius: 1.3vh;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    
-
-
+    padding: 1em;
 }
 
 .ul_rrss{
@@ -80,6 +95,7 @@ li{
 
 .area_perfil{
     display: flex;
+    flex-direction: ;
     flex-grow: 1;  /* rellena el espacio restante*/
     border-radius: 1%h;
     border-top-left-radius: 0;
@@ -91,15 +107,19 @@ li{
 
 .img_area_foto{
     border-radius: 100%;
-    width: 50%;
+    width: 70%;
     height: auto;
 }
 
 
 
+.cuadro_bio, .cuadro_projectos,.hero {
+    min-width: 100%;
+    font-size: 1.5em;
+    padding-top: 1px;
+    margin-top: 1px;
 
-
-
+}
 .titulo_foto{
     text-align: center;
     margin:5%;
@@ -124,12 +144,14 @@ li{
     min-width: 33%;
     margin-top: 11vh;
     flex-direction: column;
+    height: auto;
 }
 
 .cuadro_projectos{
     align-content: center;
     align-items: center;
     min-width: 33%;
+    overflow: auto; 
 }
 
 .hero{
@@ -137,7 +159,6 @@ li{
     flex-direction: column;
     min-width: 33%;
     flex: 1;
-    margin: 5px;
     justify-content: center;
     align-items: center;
 }
@@ -152,7 +173,7 @@ li{
 
 .titulo_tarjeta{
     text-align: center;
-    font-size: 7vh;
+    font-size: 4vh;
 }
 
 .subtitulo{
@@ -170,7 +191,7 @@ li{
 .bio{
     margin-top: 5%;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 2vh;
     font-family: monospace;
 }
 
@@ -192,22 +213,19 @@ li{
 .ul_proyectos_neon li{
     position: relative;
 	list-style: none;
-	font-size: 2em;
 	color: #fff;
 	font-family: monospace;
 	cursor: pointer;
 	box-sizing: border-box;
 	transition: 0.5s;
     z-index: 1;
-    width: 75%;
+    width: 90%;
     text-align:center;
-    padding: 2%;
+    padding: 3%;
     border-bottom: 0.1vh solid rgba(255, 0, 0, 1);
-    background-repeat: no-repeat;
-    
-    
-    
+    background-repeat: no-repeat;   
 }
+
 
 
 .ul_proyectos_neon li:hover{
@@ -270,6 +288,29 @@ li{
     max-width: 90%;
 }
 
+
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 2em;
+    }
+
+    .titulo_tarjeta,
+    .subtitulo {
+        font-size: 2vh;
+    }
+
+    .img_area_foto,
+    .foto_perfil {
+        width: 90%;
+    }
+
+    .ul_proyectos_neon li {
+        font-size: 1em;
+        padding: 4%;
+    }
+}
+
+
 .separador_titulo_proyectos{
     border: 0.2vh solid red;
     width: 78%;
@@ -313,11 +354,14 @@ form{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 15px;
+    border-radius: 10vh;
     padding: 2%;
     min-width: 50%;
     background-color: rgba(0, 0, 0, 0.7); /* Capa oscura con 50% de opacidad */
     background-blend-mode: overlay; /* Mezcla el color con la imagen */
+    height: auto;
+    margin: auto;
+    margin-bottom: 5vh;
 }
 
 
@@ -333,9 +377,13 @@ form input:hover{
     color: white;
 }
 
+
+form label{
+    font-size: 2.5vh
+}
 .separador_form{
     border: 0.1vh solid rgb(255, 0, 0);
-    margin-bottom: 5%;
+    margin-bottom: 2%;
 
 }
 
@@ -343,15 +391,15 @@ form input:hover{
 .galeria_grid{
     background-color: rgba(0, 0, 0, 0.4); /* Capa oscura con 50% de opacidad */
     display: grid; /* Uso de grid para cumplir con los requisitos del proyecto de la fp */
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
-    grid-template-rows: repeat(2, 1fr);    /* 2 filas iguales */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajuste automático */
+    grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));    /* 2 filas iguales */
     border: 2px solid red;
     box-shadow:
       0 0 2px red,
       0 0 7px red,
       0 0 7px red;
     width: 100%;
-    height: 100%;
+    height: auto;
     margin: 0;
     padding: 0;
     margin-top: 1.5%;
@@ -366,8 +414,8 @@ form input:hover{
     flex-direction: column;             
     justify-content: center;      
     align-items: center;          
-    width: 100%;
-    height: 100%;
+    width: auto;
+    height: auto;
     border: 2px solid red;
     box-shadow:
       0 0 3px red,
@@ -388,3 +436,4 @@ form input:hover{
     background-color: red;
     color: white;
 }
+
