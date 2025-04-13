@@ -157,14 +157,12 @@ li{
     overflow: hidden; /* Evita que el contenido desborde */
     margin: 0;
     padding: 0;
-    border: 1px solid blue;
 }
 
 
 .hero_imagen_perfil {
-    aspect-ratio: 1 / 1; /* siempre cuadrada */
     width: 12vw;
-    border-radius: 50%;
+    border-radius: 100%;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -172,7 +170,6 @@ li{
     border: 1px solid red;
     margin-top: 2vh;
     transition: width 0.5s ease; /* animación suave al cambiar tamaño */
-    aspect-ratio: 1/1;
 }
 
 .hero_imagen_perfil img {
@@ -199,10 +196,31 @@ li{
 }
 
 .hero_contenedor_galeria{
-    border: 1px solid yellow;
     width: 80%;
     height: 100%;
     margin-bottom: 1vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+    grid-template-rows: repeat(2, 1fr);    /* Dos filas iguales */
+    gap: 0.1vw; /* Opcional: espacio entre las celdas */
+    background: rgba(238, 51, 51, 0.3);
+    border-radius: 200px;
+}
+
+
+.hero_contenedor_galeria img {
+    width: 7vw;       
+    height: auto;      
+    object-fit: cover; /* Cubre el espacio sin deformar la imagen */
+    object-position: center; /* Centra la imagen */
+    display: block; /* Elimina espacios no deseados debajo de las imágenes */
+    margin: auto;
+}
+
+.hero_contenedor_galeria img:hover {
+    background-color: red;
+    border-radius: 1vw;
+    transition: 0.5s;
 }
 
 
@@ -410,7 +428,7 @@ form{
 form input{
     min-height: 2.5vh;
     color: black;
-    font-size: 0.3em;
+    font-size: 0.7vw;
 }
 
 form input:hover{
