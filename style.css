@@ -59,7 +59,7 @@ img {
     font-size: calc(2vw + 2em); /* Escala con el ancho de la pantalla */
 }
 
-.bio,.subtitulo {
+.bio{
     font-size: calc(1vw + 1em);
 }
 
@@ -85,11 +85,47 @@ li{
 .li_rrss{
     list-style-type: none;
     margin: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    position: relative;
+    display: inline-block;
 }
 
-.rrss{
-    height: auto;
-    width: 5vh;
+
+.li_rrss::after,
+.li_rrss::before {
+    padding: 0.01vw;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #ffffff, #610000);
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease-out;
+}
+
+.li_rrss::before {
+    top: -5px;
+    transform-origin: left;
+}
+
+.li_rrss:hover::after,
+.li_rrss:hover::before {
+    transform: scaleX(1);
+}
+
+
+.rrss {
+    width: 5vh;              /* Tamaño consistente */
+    height: 5vh;             /* Mismo valor que width para cuadrados perfectos */
+    object-fit: contain;     /* Mantiene proporciones sin deformar */
+    display: block;          /* Elimina espacio fantasma debajo de imágenes */
+    margin: auto;            /* Centrado adicional como respaldo */
 }
 
 .area_perfil{
@@ -162,21 +198,37 @@ li{
 
 .hero_imagen_perfil {
     width: 12vw;
-    border-radius: 100%;
+    width: 12vw;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
     margin-top: 2vh;
     transition: width 0.5s ease; /* animación suave al cambiar tamaño */
+    object-fit: cover; /* para cubrir el espacio sin deformar la imagen */
+    -webkit-transition: all 1s ease;
+    
 }
 
 .hero_imagen_perfil img {
-    width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
+    object-position: center;
+    display: block;
+    border-radius: 50%;
+    filter: none;
+    -webkit-transition: all 1s ease;
+}
+
+.hero_imagen_perfil:hover {
+    transform: scale(1.2);
+    transition: 1s in
+    filter: grayscale(0%);
+    filter: gray;
+    -webkit-filter: grayscale(0%);
+    filter: none;
+    transition: 1s ease;
 }
 
 .hero_nombre_apellidos{
@@ -202,7 +254,6 @@ li{
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
     grid-template-rows: repeat(2, 1fr);    /* Dos filas iguales */
-    gap: 0.1vw; /* Opcional: espacio entre las celdas */
     background: rgba(238, 51, 51, 0.3);
     border-radius: 200px;
 }
@@ -211,16 +262,23 @@ li{
 .hero_contenedor_galeria img {
     width: 7vw;       
     height: auto;      
-    object-fit: cover; /* Cubre el espacio sin deformar la imagen */
+    object-fit: cover; /* para cubrir el espacio sin deformar la imagen */
     object-position: center; /* Centra la imagen */
-    display: block; /* Elimina espacios no deseados debajo de las imágenes */
+    display: block; /* Elimina espacio  debajo de las imágenes */
     margin: auto;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -webkit-transition: all 1s ease;
 }
 
 .hero_contenedor_galeria img:hover {
-    background-color: red;
-    border-radius: 1vw;
-    transition: 0.5s;
+    transform: scale(1.2);
+    transition: 1s in
+    filter: grayscale(0%);
+    filter: gray;
+    -webkit-filter: grayscale(0%);
+    filter: none;
+    transition: 1s ease;
 }
 
 
@@ -230,12 +288,12 @@ li{
 
 .titulo_tarjeta{
     text-align: center;
-    font-size: 4vh;
+    font-size: 3vw;
 }
 
 .subtitulo{
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1vw;
 }
 
 
@@ -351,10 +409,6 @@ li{
         font-size: 2em;
     }
 
-    .titulo_tarjeta,
-    .subtitulo {
-        font-size: 2vh;
-    }
 
     .img_area_foto,
     .foto_perfil {
