@@ -23,6 +23,7 @@ html, body{
 }
 
 body {
+    background-color: red;
     background-image: url("./assets/images/wallpaper_ia_reescalado_optimizado.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -455,7 +456,7 @@ li{
 
 .form{
     width: 75%;
-    margin-bottom: 1000px;
+    margin-bottom: 2vw;
 }
 
 form{
@@ -466,6 +467,7 @@ form{
     background: rgba(138, 0, 0, 0.87);
     border-radius: 1vh;
     padding: 2%;
+    margin-bottom: 2vw;
 }
 
 
