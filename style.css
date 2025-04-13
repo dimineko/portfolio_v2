@@ -121,11 +121,11 @@ li{
 
 
 .rrss {
-    width: 5vh;              /* Tamaño consistente */
-    height: 5vh;             /* Mismo valor que width para cuadrados perfectos */
-    object-fit: contain;     /* Mantiene proporciones sin deformar */
-    display: block;          /* Elimina espacio fantasma debajo de imágenes */
-    margin: auto;            /* Centrado adicional como respaldo */
+    width: 5vh;              
+    height: 5vh;             
+    object-fit: contain;     /* para mentener proporciones sin deformar */
+    display: block;          /* Elimina espacio debajo de imágenes */
+    margin: auto;            /* quitar margenes por si acaso */
 }
 
 .area_perfil{
@@ -486,12 +486,4 @@ form label{
 .separador_form{
     border: 0.1vh solid rgb(255, 0, 0);
     margin-bottom: 2%;
-
 }
-
-
-
-
-
-
-
