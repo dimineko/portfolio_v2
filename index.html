@@ -2,6 +2,8 @@
 <html lang="es">
 <head>
 	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio personal de Diego - Analista de Ciberseguridad">
 	<title>PORTFOLIO DE DIEGO</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -11,12 +13,12 @@
     <div class="tarjeta">
 
         <header>
-            <h2 class="titulo">PORTFOLIO DE DIEGO</h2>
-            <nav>
+            <h1 class="titulo">PORTFOLIO DE DIEGO</h1>
+            <nav aria-label="Redes sociales">
                 <ul class="ul_rrss">
-                    <li class="li_rrss"><a href="http://github.com"><img class="rrss" src="./assets/images/github-mark-white.png" alt="Github"></a></li>
-                    <li class="li_rrss"><a href="http://linkedin.com"><img class="rrss" src="./assets/images/LI-In-Bug.png" alt="Linkedin"></a></li>
-                    <li class="li_rrss"><a href="http://gmail.com"><img class="rrss" src="./assets/images/gmail.png" alt="Gmail"></a></li>
+                    <li class="li_rrss"><a href="http://github.com" aria-label="Visitar perfil de GitHub"><img class="rrss" src="./assets/images/github-mark-white.png" alt="GitHub"></a></li>
+                    <li class="li_rrss"><a href="http://linkedin.com" aria-label="Visitar perfil de LinkedIn"><img class="rrss" src="./assets/images/LI-In-Bug.png" alt="LinkedIn"></a></li>
+                    <li class="li_rrss"><a href="http://gmail.com" aria-label="Enviar correo electrónico"><img class="rrss" src="./assets/images/gmail.png" alt="Gmail"></a></li>
                 </ul>
             </nav>
         </header>
@@ -26,23 +28,26 @@
             <div class="cuadro_bio">
                 <h2 class="titulo_tarjeta">WHO AM I?</h2>
                 <hr class="separador_bio">
-                <h2 class="subtitulo">Cybersecurity Analyst</h2>
+                <h3 class="subtitulo">Cybersecurity Analyst</h3>
                 <hr class="separador_bio">
                 <p class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus deleniti dolorem saepe quaerat iste aperiam architecto voluptas rerum fugiat ullam! Quae officiis, qui similique quam omnis voluptates architecto laborum corporis!</p>
 
                 <h2 class="titulo_tarjeta">CONTACT ME</h2>
                 <div class="form">
-                    <form>
-                        <label for="nombre">Nombre: </label>
-                        <p><hr class="separador_form">                    
-                        <input type="text" id="nombre" name="nombre" value="Ejemplo: Felipe ... "><br>
-                        <label for="apellidos">Apellidos: </label>                    
-                        <p><hr class="separador_form">   
-                        <input type="text" id="apellidos" name="apellidos" value="Ejemplo: Martinez Lopez ..."><br>
-                        <label for="correo">Correo electrónico: </label>                    
-                        <p><hr class="separador_form">  
-                        <input type="text" id="correo" name="correo" value="Ejemplo: felipzmartinezlopez@gmail.com..."><br>
-                        <input type="submit" value="Enviar correo de contacto!">
+                    <form action="#" method="POST">
+                        <label for="nombre">Nombre:</label>
+                        <hr class="separador_form">
+                        <input type="text" id="nombre" name="nombre" placeholder="Ejemplo: Felipe ..." required>
+                        
+                        <label for="apellidos">Apellidos:</label>
+                        <hr class="separador_form">
+                        <input type="text" id="apellidos" name="apellidos" placeholder="Ejemplo: Martinez Lopez ..." required>
+                        
+                        <label for="correo">Correo electrónico:</label>
+                        <hr class="separador_form">
+                        <input type="email" id="correo" name="correo" placeholder="Ejemplo: felipzmartinezlopez@gmail.com" required>
+                        
+                        <button type="submit">Enviar correo de contacto!</button>
                     </form>
                 </div>
 
@@ -51,66 +56,43 @@
 
 
             <main class="cuadro_projectos">
-                <h1 class="titulo_tarjeta">MIS PROYECTOS</h1>
+                <h2 class="titulo_tarjeta">MIS PROYECTOS</h2>
                 <hr class="separador_titulo_proyectos">
                 <ul class="ul_proyectos_neon">
                     <li>
-                        <a href="https://github.com/dimineko/proxygather">
-                            <p><img class="img_proyectos" src="./assets/images/github-mark-white.png" alt="Github">Proxy Gather</p>
-                        </a>
-                    </li>
-                                            
-                            
-
-                    <li>
-                        <a href="https://github.com/dimineko/Python-Reconocimiento-Facial">
-                            <p><img class="img_proyectos" src="./assets/images/github-mark-white.png" alt="Repositorio de python de reconocimiento facil con IA"> [PYTHON] Reconocimiento facial</p>
+                        <a href="https://github.com/dimineko/proxygather" aria-label="Ver proyecto Proxy Gather">
+                            <p><img class="img_proyectos" src="./assets/images/github-mark-white.png" alt="Icono de GitHub">Proxy Gather</p>
                         </a>
                     </li>
                     
-
-                    
                     <li>
-                        <a href="https://github.com/dimineko/proxygather">
-                            <p><img class="img_proyectos" src="./assets/images/github-mark-white.png" alt="Github">Proxy Gather</p>
+                        <a href="https://github.com/dimineko/Python-Reconocimiento-Facial" aria-label="Ver proyecto de Reconocimiento Facial en Python">
+                            <p><img class="img_proyectos" src="./assets/images/github-mark-white.png" alt="Icono de GitHub">[PYTHON] Reconocimiento facial</p>
                         </a>
                     </li>
                     
-                    
                     <li>
-                        <a href="https://github.com/dimineko/Proxy-Checker">
-                            <p><img class="img_proyectos" src="./assets/images/github-mark-white.png" alt="Github">Proxy Checker</p>
-                        </a>                     
+                        <a href="https://github.com/dimineko/Proxy-Checker" aria-label="Ver proyecto Proxy Checker">
+                            <p><img class="img_proyectos" src="./assets/images/github-mark-white.png" alt="Icono de GitHub">Proxy Checker</p>
+                        </a>
                     </li>
-                    
-
-                    <li>
-                        <a href="https://github.com/dimineko/Python-Reconocimiento-Facial">
-                            <p><img class="img_proyectos" src="./assets/images/github-mark-white.png" alt="Github">Python-Reconocimiento facial</p>
-                        </a>                 
-                    </li>
-                    
-
                 </ul>
             </main>
 
-            <div class="hero">
+            <aside class="hero">
                 <div class="hero_imagen_perfil">
-                    <img src="/assets/images/dall-e.jpg" alt="">
+                    <img src="./assets/images/dall-e.jpg" alt="Foto de perfil de Diego">
                 </div>
 
                 <h2 class="hero_nombre_apellidos">DIEGO APELLIDO 1 APELLIDO 2</h2>
                 <h3 class="hero_titulo_galeria">GALERÍA DE EJEMPLO</h3>
                 <div class="hero_contenedor_galeria">
-                    <a href="https://portswigger.net/burp/pro"><img src="/assets/images/burp.png" alt="Burp Suite (Proxy)"></a>
-                    <a href="https://www.kali.org/"><img src="/assets/images/linux.png" alt="Linux (Kali Linux, Sistema operativo)"></a>
-                    <a href="https://www.metasploit.com/"><img src="/assets/images/metasploit.png" alt="Metasploit (Software para busqueda y uso de exploits públicos)"></a>
-                    <a href="https://www.python.org/"><img src="/assets/images/python.png" alt="Python - Lenguaje de programación"></a>
-                    
-                    
-                    
+                    <a href="https://portswigger.net/burp/pro" aria-label="Más información sobre Burp Suite"><img src="./assets/images/burp.png" alt="Burp Suite (Proxy)"></a>
+                    <a href="https://www.kali.org/" aria-label="Más información sobre Kali Linux"><img src="./assets/images/linux.png" alt="Linux (Kali Linux, Sistema operativo)"></a>
+                    <a href="https://www.metasploit.com/" aria-label="Más información sobre Metasploit"><img src="./assets/images/metasploit.png" alt="Metasploit (Software para búsqueda y uso de exploits públicos)"></a>
+                    <a href="https://www.python.org/" aria-label="Más información sobre Python"><img src="./assets/images/python.png" alt="Python - Lenguaje de programación"></a>
                 </div>
-            </div> 
+            </aside>
 
 
             

@@ -3,36 +3,31 @@
     src: url('./assets/fonts/glitch_goblin/GlitchGoblin.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-  }
-  
-
-
+}
 
 * {
     color: white;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    caret-color: transparent; /* para que no salga la barra vertical del ratón semitransparente */
+    caret-color: transparent;
 }
 
-html, body{
-    font-family: var(--fuente-personalizada);
+html, body {
+    font-family: 'FuenteCyberpunk', sans-serif;
     height: 100%;
-    font-family: 'FuenteCyberpunk';
+    width: 100%;
 }
 
 body {
-    background-color: red;
+    background-color: #000;
     background-image: url("./assets/images/wallpaper_ia_reescalado_optimizado.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 15px;
+    background-attachment: fixed;
     padding: 3%;
-    overflow: hidden;
-    
-
+    overflow-x: hidden;
 }
 
 img {
@@ -47,8 +42,6 @@ img {
     display: flex;
     flex-direction: column;
 }
-
-
 
 .titulo{
     text-align: left;
@@ -94,7 +87,6 @@ li{
     display: inline-block;
 }
 
-
 .li_rrss::after,
 .li_rrss::before {
     padding: 0.01vw;
@@ -120,7 +112,6 @@ li{
     transform: scaleX(1);
 }
 
-
 .rrss {
     width: 5vh;              
     height: 5vh;             
@@ -129,17 +120,15 @@ li{
     margin: auto;            /* quitar margenes por si acaso */
 }
 
-.area_perfil{
+.area_perfil {
     display: flex;
-    flex-direction: ;
-    flex-grow: 1;  /* rellena el espacio restante*/
-    border-radius: 1%h;
+    flex-direction: row;
+    flex-grow: 1;
+    border-radius: 1%;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    overflow:hidden; /* evita el scroll */
+    overflow: hidden;
 }
-
-
 
 .img_area_foto{
     border-radius: 100%;
@@ -147,14 +136,10 @@ li{
     height: auto;
 }
 
-
-
-
 .titulo_foto{
     text-align: center;
     margin:5%;
 }
-
 
 .cuadro{
     flex: 1;
@@ -195,40 +180,28 @@ li{
     padding: 0;
 }
 
-
 .hero_imagen_perfil {
     width: 12vw;
-    width: 12vw;
+    height: 12vw;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 2vh;
-    transition: width 0.5s ease; /* animación suave al cambiar tamaño */
-    object-fit: cover; /* para cubrir el espacio sin deformar la imagen */
-    -webkit-transition: all 1s ease;
-    
+    transition: all 0.5s ease;
 }
 
 .hero_imagen_perfil img {
+    width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
-    object-position: center;
-    display: block;
     border-radius: 50%;
-    filter: none;
-    -webkit-transition: all 1s ease;
+    transition: all 0.5s ease;
 }
 
 .hero_imagen_perfil:hover {
     transform: scale(1.2);
-    transition: 1s in
-    filter: grayscale(0%);
-    filter: gray;
-    -webkit-filter: grayscale(0%);
     filter: none;
-    transition: 1s ease;
 }
 
 .hero_nombre_apellidos{
@@ -238,7 +211,6 @@ li{
     margin-top: 1vw;
     margin: 1vw;
 }
-
 
 .hero_titulo_galeria{
     font-size: 1vw;
@@ -259,7 +231,6 @@ li{
     align-items: center;     /* Centrado vertical */
     justify-items: center;   /* Centrado horizontal */
 }
-
 
 .hero_contenedor_galeria img {
     width: 7vw;       
@@ -283,11 +254,6 @@ li{
     transition: 1s ease;
 }
 
-
-
-
-
-
 .titulo_tarjeta{
     text-align: center;
     font-size: 3vw;
@@ -297,7 +263,6 @@ li{
     text-align: center;
     font-size: 1vw;
 }
-
 
 .separador_bio{
     border: 1px solid red;
@@ -312,7 +277,6 @@ li{
     font-family: monospace;
 }
 
-
 .h1_proyectos_neon{
     font-size: 5em;
 }
@@ -325,7 +289,6 @@ li{
 	margin: 0;
 	padding-top: 1%;
 }
-
 
 .ul_proyectos_neon li{
     position: relative;
@@ -342,12 +305,9 @@ li{
     background-repeat: no-repeat;   
 }
 
-
-
 .ul_proyectos_neon li:hover{
     color: #111;
 }
-
 
 .ul_proyectos_neon li:before
 {
@@ -394,8 +354,6 @@ li{
     transform-origin: top;
   }
   
-
-
 .ul_proyectos_neon li a{
     text-decoration: none;
     font-family: var(--fuente-personalizada);
@@ -404,12 +362,10 @@ li{
     max-width: 90%;
 }
 
-
 @media (max-width: 480px) {
     .titulo {
         font-size: 2em;
     }
-
 
     .img_area_foto,
     .foto_perfil {
@@ -425,14 +381,12 @@ li{
     }
 }
 
-
 .separador_titulo_proyectos{
     border: 0.2vh solid red;
     width: 78%;
     margin: auto;
     margin-bottom: 0.3vh;
 }
-
 
 .separador_proyectos{
     border: 0.1vh solid rgb(255, 0, 0);
@@ -441,13 +395,10 @@ li{
     
 }
 
-
-
 .img_proyectos{
     width: 3vh;
     height: 3vh auto;
 }
-
 
 .nombre{
     font-size: 3em;
@@ -470,7 +421,6 @@ form{
     margin-bottom: 2vw;
 }
 
-
 form input{
     min-height: 2.5vh;
     color: black;
@@ -483,11 +433,292 @@ form input:hover{
     color: white;
 }
 
-
 form label{
     font-size: 2.5vh
 }
 .separador_form{
     border: 0.1vh solid rgb(255, 0, 0);
     margin-bottom: 2%;
+}
+
+form button {
+    background-color: rgba(255, 0, 0, 0.57);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'FuenteCyberpunk', sans-serif;
+    font-size: 1em;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+form button:hover {
+    background-color: rgba(255, 0, 0, 0.8);
+    transform: scale(1.05);
+}
+
+form button:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 1%;
+        overflow-x: hidden;
+    }
+    
+    .tarjeta {
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    .area_perfil {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .cuadro_bio, .cuadro_projectos, .hero {
+        width: 100%;
+        min-width: 100%;
+        margin: 1rem 0;
+        padding: 0 1rem;
+    }
+    
+    header {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    .titulo {
+        font-size: 2rem;
+        text-align: center;
+        margin: 0;
+    }
+    
+    .ul_rrss {
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .rrss {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    
+    .hero_imagen_perfil {
+        width: 150px;
+        height: 150px;
+        margin: 1rem auto;
+    }
+    
+    .hero_nombre_apellidos {
+        font-size: 1.5rem;
+        text-align: center;
+        margin: 1rem 0;
+    }
+    
+    .hero_titulo_galeria {
+        font-size: 1.2rem;
+        text-align: center;
+        margin: 1rem 0;
+    }
+    
+    .hero_contenedor_galeria {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+        padding: 0.5rem;
+    }
+    
+    .hero_contenedor_galeria img {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+        margin: 0 auto;
+    }
+    
+    .titulo_tarjeta {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    
+    .subtitulo {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+    
+    .bio {
+        font-size: 1rem;
+        text-align: justify;
+        padding: 0 1rem;
+    }
+    
+    .form {
+        width: 100%;
+        padding: 0 1rem;
+    }
+    
+    form input {
+        width: 100%;
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+    
+    form label {
+        font-size: 1rem;
+    }
+    
+    form button {
+        width: 100%;
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+    
+    .ul_proyectos_neon {
+        padding: 0 1rem;
+    }
+    
+    .ul_proyectos_neon li {
+        margin: 1rem 0;
+        padding: 0.5rem;
+    }
+    
+    .ul_proyectos_neon li a {
+        font-size: 1rem;
+    }
+    
+    .img_proyectos {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+    
+    .rrss {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+/* Media Queries para dispositivos muy pequeños */
+@media (max-width: 480px) {
+    body {
+        padding: 0.5%;
+    }
+    
+    .titulo {
+        font-size: 1.5rem;
+    }
+    
+    .hero_imagen_perfil {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .hero_nombre_apellidos {
+        font-size: 1.2rem;
+    }
+    
+    .hero_titulo_galeria {
+        font-size: 1rem;
+    }
+    
+    .hero_contenedor_galeria {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.3rem;
+    }
+    
+    .hero_contenedor_galeria img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .img_proyectos {
+        width: 1rem;
+        height: 1rem;
+    }
+    
+    .rrss {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+    
+    .titulo_tarjeta {
+        font-size: 1.5rem;
+    }
+    
+    .subtitulo {
+        font-size: 1.2rem;
+    }
+    
+    .bio {
+        font-size: 0.9rem;
+    }
+    
+    .ul_proyectos_neon li a {
+        font-size: 0.9rem;
+    }
+    
+    form input, form label, form button {
+        font-size: 0.9rem;
+    }
+}
+
+/* Media Queries para dispositivos en modo paisaje */
+@media (max-height: 600px) and (orientation: landscape) {
+    .area_perfil {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .cuadro_bio, .cuadro_projectos, .hero {
+        width: 50%;
+        min-width: 50%;
+    }
+    
+    .hero_imagen_perfil {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Ajustes para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .area_perfil {
+        gap: 1rem;
+    }
+    
+    .cuadro_bio, .cuadro_projectos, .hero {
+        padding: 0 1rem;
+    }
+    
+    .hero_imagen_perfil {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .titulo_tarjeta {
+        font-size: 2rem;
+    }
+    
+    .bio {
+        font-size: 1.1rem;
+    }
+    
+    .hero_contenedor_galeria img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .img_proyectos {
+        width: 1.3rem;
+        height: 1.3rem;
+    }
+    
+    .rrss {
+        width: 2.2rem;
+        height: 2.2rem;
+    }
 }
