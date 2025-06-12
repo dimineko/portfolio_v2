@@ -666,7 +666,7 @@ form button:active {
     }
 }
 
-/* Media Queries para dispositivos en modo paisaje */
+/* Media Queries para móviles con el objetivo de que sean columnas stackeadas en vertical */
 @media (max-height: 600px) and (orientation: landscape) {
     .area_perfil {
         flex-direction: row;
