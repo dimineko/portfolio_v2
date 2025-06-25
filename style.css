@@ -810,3 +810,83 @@ form button:active {
         font-size: 0.9rem;
     }
 }
+
+/* Footer de Privacidad */
+.footer-privacidad {
+    background: rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(255, 0, 0, 0.3);
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    font-family: 'Mechanical', sans-serif;
+}
+
+.footer-content {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.footer-content h4 {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+    color: #fff;
+}
+
+.footer-content p {
+    font-size: 0.75rem;
+    line-height: 1.2;
+    margin-bottom: 0.4rem;
+    color: #fff;
+    opacity: 0.7;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.7rem;
+    opacity: 0.8;
+}
+
+.footer-link:hover {
+    opacity: 1;
+}
+
+.separator {
+    color: rgba(255, 0, 0, 0.4);
+    font-size: 0.7rem;
+}
+
+/* Media queries para el footer */
+@media (max-width: 768px) {
+    .footer-privacidad {
+        padding: 0.4rem;
+        margin-top: 0.4rem;
+    }
+    
+    .footer-content h4 {
+        font-size: 0.8rem;
+    }
+    
+    .footer-content p {
+        font-size: 0.7rem;
+    }
+    
+    .footer-links {
+        gap: 0.6rem;
+    }
+    
+    .footer-link {
+        font-size: 0.65rem;
+    }
+    
+    .separator {
+        font-size: 0.65rem;
+    }
+}
