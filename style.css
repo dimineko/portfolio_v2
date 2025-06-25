@@ -6,14 +6,10 @@
 }
 
 @font-face {
-    font-family: 'FuenteMechanical';
-    src: url('./assets/fonts/Mechanical-g5Y5.otf') format('opentype');
+    font-family: 'SDCyberPunkCity';
+    src: url('./assets/fonts/SDCyberPunkCityDemo.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
-}
-
-.fuente-mechanical {
-    font-family: 'FuenteMechanical', sans-serif;
 }
 
 * {
@@ -257,7 +253,7 @@ li{
 
 .hero_contenedor_galeria img:hover {
     transform: scale(1.2);
-    transition: 1s in
+    transition: 1s ease;
     filter: grayscale(0%);
     filter: gray;
     -webkit-filter: grayscale(0%);
