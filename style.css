@@ -6,8 +6,8 @@
 }
 
 @font-face {
-    font-family: 'SDCyberPunkCity';
-    src: url('./assets/fonts/SDCyberPunkCityDemo.otf') format('opentype');
+    font-family: 'Mechanical';
+    src: url('./assets/fonts/Mechanical-g5Y5.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -727,5 +727,86 @@ form button:active {
     .rrss {
         width: 2.2rem;
         height: 2.2rem;
+    }
+}
+
+/* Popup de Cookies */
+.cookie-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    font-family: 'Mechanical', sans-serif;
+}
+
+.cookie-content {
+    background: rgba(255, 0, 0, 0.9);
+    padding: 2rem;
+    border-radius: 1vh;
+    text-align: center;
+    max-width: 400px;
+    margin: 1rem;
+    border: 2px solid #fff;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+.cookie-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.cookie-content p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    line-height: 1.4;
+}
+
+.cookie-btn {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 0.8rem 2rem;
+    border-radius: 0.5vh;
+    cursor: pointer;
+    font-family: 'Mechanical', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.cookie-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.cookie-popup.hidden {
+    display: none;
+}
+
+/* Media queries para el popup */
+@media (max-width: 768px) {
+    .cookie-content {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+    
+    .cookie-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .cookie-content p {
+        font-size: 0.9rem;
+    }
+    
+    .cookie-btn {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
     }
 }

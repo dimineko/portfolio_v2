@@ -101,7 +101,31 @@
 
     </div>
 
+    <!-- Popup de Cookies -->
+    <div id="cookie-popup" class="cookie-popup">
+        <div class="cookie-content">
+            <h3>🍪 Este sitio usa cookies</h3>
+            <p>Utilizamos cookies para mejorar tu experiencia. Al continuar navegando, aceptas nuestro uso de cookies.</p>
+            <button id="accept-cookies" class="cookie-btn">Aceptar</button>
+        </div>
+    </div>
 
+    <script>
+        // Popup de cookies
+        document.addEventListener('DOMContentLoaded', function() {
+            const cookiePopup = document.getElementById('cookie-popup');
+            const acceptBtn = document.getElementById('accept-cookies');
+            
+            // Mostrar popup al cargar la página
+            cookiePopup.style.display = 'flex';
+            
+            // Ocultar popup al hacer clic en aceptar
+            acceptBtn.addEventListener('click', function() {
+                cookiePopup.classList.add('hidden');
+                cookiePopup.style.display = 'none';
+            });
+        });
+    </script>
 
 </body>
 </html>
